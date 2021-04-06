@@ -1,0 +1,55 @@
+{
+  "name": "teacher",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "productName": "teachernew",
+    "appId": "com.wonmega.app",
+    "directories": {
+      "output": "eledist"
+    },
+    "extraResources": {
+      "from": "./mainconfig/",
+      "to": "mainconfig"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "mainconfig/icon.png",
+      "uninstallerIcon": "mainconfig/icon.png",
+      "installerHeaderIcon": "mainconfig/icon.png",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "teachernew"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "mainconfig/icon.png",
+      "target": [
+        "zip"
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.4"
+  }
+}
