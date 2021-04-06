@@ -1,9 +1,5 @@
 .DS_Store
 node_modules
-/dist
-/eledist
-/extendapp
-/mainconfig
 
 # local env files
 .env.local
